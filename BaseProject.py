@@ -133,7 +133,7 @@ def one_day(state, day, strategy, ever_infected, adaptive_shopper, recovered_tim
         elif state[i] == 3: # and np.random.random() < 1/avgrlday:
             days_since_rec = day-recovered_time[i]
             if days_since_rec >= grace:
-                if np.random.random() < omega:
+                if np.random.random() < omega_i[i]:
                     new_state[i] = 0
     return new_state
 
